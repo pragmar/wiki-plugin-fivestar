@@ -10,7 +10,7 @@
         });
     };
     
-    emit = function(container, item) { 
+    emit = function(container, item) {
         
         // add required css
         if (!$('link[href="/plugins/fivestar/fivestar.css"]').length) {
@@ -90,10 +90,10 @@
                 // save clicked rating and re-render
                 var el = getStarElements(this);
                 var data = el.star.attr('data-rating');
-                var item = wiki.getItem(el.container);                
+                var item = wiki.getItem(el.container);
                 
                 item.text = data;
-                save(el.container, item);                          
+                save(el.container, item);
                 render();
             
             });
