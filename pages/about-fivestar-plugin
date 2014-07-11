@@ -1,0 +1,39 @@
+{
+  "title": "About Five Star",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d2f89852e5065f0f",
+      "text": "FiveStar Plugin developed for Mike Caulfield's http://movienight.pw project to rate films. But why stop at films?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Five Star 2",
+        "story": []
+      },
+      "date": 1405047813092
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d2f89852e5065f0f"
+      },
+      "id": "d2f89852e5065f0f",
+      "type": "add",
+      "date": 1405047816889
+    },
+    {
+      "type": "edit",
+      "id": "d2f89852e5065f0f",
+      "item": {
+        "type": "paragraph",
+        "id": "d2f89852e5065f0f",
+        "text": "FiveStar Plugin developed for Mike Caulfield's http://movienight.pw project to rate films. But why stop at films?"
+      },
+      "date": 1405047864196
+    }
+  ]
+}

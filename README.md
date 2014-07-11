@@ -1,4 +1,3 @@
-wiki-plugin-fivestar
-====================
+# Federated Wiki - Five Star Rating Plug-in
 
-Rating plugin for Smallest Federated Wiki
+Takes a number, 1-5, and renders as a star rating.

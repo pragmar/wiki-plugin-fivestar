@@ -1,0 +1,33 @@
+{
+    "name": "wiki-plugin-fivestar",
+    "version": "0.1",
+    "description": "Federated Wiki - Five Star Rating Plug-in",
+    "keywords": [
+        "wiki",
+        "federated wiki",
+        "plugin"
+    ],
+    "author": {
+        "name": "Ben Caulfield",
+        "email": "ben@pragmar.com",
+        "url": "http://pragmar.com"
+    },
+    "contributors": [],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "license": "MIT",  
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pragmar/wiki-plugin-fivestar.git"
+    },
+        "bugs": {
+        "url": "https://github.com/pragmar/wiki-plugin-fivestar/issues"
+    },
+    "engines": {
+    "node": "0.10"
+    },
+    "homepage": "http://pragmar.com",
+    "_id": "wiki-plugin-fivestar@20140710",
+    "_from": "wiki-plugin-fivestar@*"
+}

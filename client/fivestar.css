@@ -1,0 +1,24 @@
+.fivestar {
+    position:relative;
+}
+
+.fivestar .star {
+    display: inline-block;
+    width:32px;
+}
+
+.fivestar .star svg {
+    width:100%;
+    height:100%;
+}
+
+.fivestar .widget {
+    position: relative;    
+    height:32px;    
+    
+}
+
+.fivestar .widget .layer {
+    display: block;    
+    position:absolute;
+}
