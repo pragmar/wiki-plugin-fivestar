@@ -1,17 +1,37 @@
 {
-  "title": "About Five Star",
+  "title": "About FiveStar Plugin",
   "story": [
     {
       "type": "paragraph",
       "id": "d2f89852e5065f0f",
-      "text": "FiveStar Plugin developed for Mike Caulfield's http://movienight.pw project to rate films. But why stop at films?"
+      "text": "FiveStar Plugin developed for Mike Caulfield's MovieNight project to rate films. But why stop at films?"
+    },
+    {
+      "type": "fivestar",
+      "id": "947cb8e17d957b87",
+      "text": "4"
+    },
+    {
+      "type": "paragraph",
+      "id": "59effee564873526",
+      "text": "When you create a FiveStar from the Factory menu you get a blank edit box which one would expect of a text markup. You have to type a number, 3 for three stars."
+    },
+    {
+      "type": "paragraph",
+      "id": "aa0350465b7c8e65",
+      "text": "After that you can edit the number by just clicking stars. This saves an action to the journal and forks the page (possibly to local storage) if need be."
+    },
+    {
+      "type": "paragraph",
+      "id": "c42bf096dae68b64",
+      "text": "Original work by Ben Caulfield, now hosted in the federated-wiki org. [https://github.com/federated-wiki/wiki-plugin-fivestar github]"
     }
   ],
   "journal": [
     {
       "type": "create",
       "item": {
-        "title": "About Five Star 2",
+        "title": "About FiveStar Plugin",
         "story": []
       },
       "date": 1405047813092
@@ -31,9 +51,73 @@
       "item": {
         "type": "paragraph",
         "id": "d2f89852e5065f0f",
-        "text": "FiveStar Plugin developed for Mike Caulfield's http://movienight.pw project to rate films. But why stop at films?"
+        "text": "FiveStar Plugin developed for Mike Caulfield's MovieNight project to rate films. But why stop at films?"
       },
       "date": 1405047864196
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "fivestar",
+        "id": "947cb8e17d957b87",
+        "text": "4"
+      },
+      "after": "d2f89852e5065f0f",
+      "id": "947cb8e17d957b87",
+      "date": 1492912225328
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "59effee564873526",
+        "text": "When you create a FiveStar from the Factory menu you get a blank edit box which one would expect of a text markup. You have to type a number, 3 for three stars."
+      },
+      "after": "947cb8e17d957b87",
+      "id": "59effee564873526",
+      "date": 1492912259448
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "aa0350465b7c8e65",
+        "text": "After that you can edit the number by just clicking stars. This saves an action to the journal and forks the page (possibly to local storage) if need be. "
+      },
+      "after": "59effee564873526",
+      "id": "aa0350465b7c8e65",
+      "date": 1492912262664
+    },
+    {
+      "type": "edit",
+      "id": "aa0350465b7c8e65",
+      "item": {
+        "type": "paragraph",
+        "id": "aa0350465b7c8e65",
+        "text": "After that you can edit the number by just clicking stars. This saves an action to the journal and forks the page (possibly to local storage) if need be."
+      },
+      "date": 1492912308152
+    },
+    {
+      "type": "add",
+      "id": "c42bf096dae68b64",
+      "item": {
+        "type": "paragraph",
+        "id": "c42bf096dae68b64",
+        "text": "Original work by Ben Caulfield, now hosted in the federated-wiki org. "
+      },
+      "after": "aa0350465b7c8e65",
+      "date": 1492912355761
+    },
+    {
+      "type": "edit",
+      "id": "c42bf096dae68b64",
+      "item": {
+        "type": "paragraph",
+        "id": "c42bf096dae68b64",
+        "text": "Original work by Ben Caulfield, now hosted in the federated-wiki org. [https://github.com/federated-wiki/wiki-plugin-fivestar github]"
+      },
+      "date": 1492912391167
     }
   ]
 }
