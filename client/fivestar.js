@@ -92,7 +92,7 @@
                 var data = el.star.attr('data-rating');
                 var item = wiki.getItem(el.container);
                 
-                item.text = data;
+                item.stars = data;
                 save(el.container, item);
                 render();
             
@@ -108,7 +108,7 @@
         $('.fivestar').each(function(index, value){
             var _this = $(this);
             var item = wiki.getItem(_this);
-            var stars = item.text;
+            var stars = item.stars || parseInt(item.text) || 0;
             // set yellow stars to stored vales and kill active hover 
             $('.star.stored',_this).css('opacity', '0');
             $('.star.stored:lt('+stars+')', _this).css('opacity', '1');
