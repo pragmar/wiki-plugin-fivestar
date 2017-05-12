@@ -28,7 +28,7 @@
       "site": "best.ward.bay.wiki.org",
       "slug": "best-cities",
       "title": "Best Cities",
-      "text": "Here we list some well known cities, create pages for them with a template, and then rate them on many dimensions clicking stars. Results are automatically aggregated as a single file. [http://best.ward.bay.wiki.org/plugin/fivestar/slugs json]"
+      "text": "Here we list some well known cities, create pages for them with a template, and then rate them on many dimensions clicking stars. Results are automatically aggregated as a single file. [http://best.ward.bay.wiki.org/plugin/fivestar/ratings.json json]"
     },
     {
       "type": "paragraph",
@@ -204,7 +204,7 @@
         "site": "best.ward.bay.wiki.org",
         "slug": "best-cities",
         "title": "Best Cities",
-        "text": "Here we list some well known cities, create pages for them with a template, and then rate them on many dimensions clicking stars. Results are automatically aggregated as a single file. [http://best.ward.bay.wiki.org/plugin/fivestar/slugs json]"
+        "text": "Here we list some well known cities, create pages for them with a template, and then rate them on many dimensions clicking stars. Results are automatically aggregated as a single file. [http://best.ward.bay.wiki.org/plugin/fivestar/ratings.json json]"
       },
       "date": 1494596591794
     },
