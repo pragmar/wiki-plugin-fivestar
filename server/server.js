@@ -9,21 +9,12 @@
   function startServer(params) {
     var app = params.app
     var argv = params.argv
-    app.get('/plugin/fivestar/details/:stars/:stripes', details)
-    app.get('/plugin/fivestar/slugs', slugs)
+    app.get('/plugin/fivestar/ratings.json', ratings)
 
-    function details(req, res) {
-      var report = {}
-      report.req = Object.keys(req)
-      report.params = req.params
-      report.query = req.query
-      return res.send("<pre>" + (JSON.stringify(report, null, '  ')))
-    }
-
-    function slugs(req, res) {
+    function ratings(req, res) {
       var report = {}
 
-      glob(argv.db+'/*', { cwd: argv.packageDir }, allfiles)
+      glob('*', { cwd: argv.db }, allfiles)
 
       function allfiles(err, files) {
         if (err) return done(err)
@@ -31,7 +22,7 @@
       }
 
       function eachfile(file, done) {
-        jsonfile.readFile(file, {throws:false}, eachpage)
+        jsonfile.readFile(argv.db + '/' + file, {throws:false}, eachpage)
 
         function eachpage(err, page) {
           if (err) return done(err)
@@ -43,7 +34,7 @@
             var item = story[i]
             if(item && item.type && item.type == 'fivestar') {
               if(item.stars) {
-                stars[item.text||'unlabled'] = item.stars
+                stars[item.text||'unlabled'] = parseInt(item.stars)
               }
             }
           }
@@ -56,7 +47,8 @@
 
       function done(err) {
         if (err) return res.send(err.message)
-        res.send("<pre>" + (JSON.stringify(report, null, '  ')))
+        res.set({'Content-type': 'application/json'})
+        res.send(report)
       }
     }
 
