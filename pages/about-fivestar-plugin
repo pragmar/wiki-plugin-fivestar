@@ -9,17 +9,26 @@
     {
       "type": "fivestar",
       "id": "947cb8e17d957b87",
-      "text": "4"
+      "text": "Rating",
+      "stars": "3"
     },
     {
       "type": "paragraph",
       "id": "59effee564873526",
-      "text": "When you create a FiveStar from the Factory menu you get a blank edit box which one would expect of a text markup. You have to type a number, 3 for three stars."
+      "text": "Markup the plugin with the name of the property being rated. This should be one line, written in Title Case, no punctuation or newline."
     },
     {
       "type": "paragraph",
-      "id": "aa0350465b7c8e65",
-      "text": "After that you can edit the number by just clicking stars. This saves an action to the journal and forks the page (possibly to local storage) if need be."
+      "id": "e4b72d44c3ae3baf",
+      "text": "We've created a sample site that uses a Template to define multiple scales for rating cities. Explore there to see how FiveStar works with other wiki data capabilities."
+    },
+    {
+      "type": "reference",
+      "id": "d8fccd7e8a388d41",
+      "site": "best.ward.bay.wiki.org",
+      "slug": "best-cities",
+      "title": "Best Cities",
+      "text": "Here we list some well known cities, create pages for them with a template, and then rate them on many dimensions clicking stars. Results are automatically aggregated as a single file. [http://best.ward.bay.wiki.org/plugin/fivestar/slugs json]"
     },
     {
       "type": "paragraph",
@@ -118,6 +127,99 @@
         "text": "Original work by Ben Caulfield, now hosted in the federated-wiki org. [https://github.com/federated-wiki/wiki-plugin-fivestar github]"
       },
       "date": 1492912391167
+    },
+    {
+      "type": "edit",
+      "id": "947cb8e17d957b87",
+      "item": {
+        "type": "fivestar",
+        "id": "947cb8e17d957b87",
+        "text": "Rating"
+      },
+      "date": 1494596054547
+    },
+    {
+      "type": "edit",
+      "id": "947cb8e17d957b87",
+      "item": {
+        "type": "fivestar",
+        "id": "947cb8e17d957b87",
+        "text": "Rating",
+        "stars": "3"
+      },
+      "date": 1494596057646
+    },
+    {
+      "type": "edit",
+      "id": "59effee564873526",
+      "item": {
+        "type": "paragraph",
+        "id": "59effee564873526",
+        "text": "Markup the plugin with the name of the property being rated. This should be one line, written in Title Case, no punctuation or newline."
+      },
+      "date": 1494596256297
+    },
+    {
+      "type": "remove",
+      "id": "aa0350465b7c8e65",
+      "date": 1494596336670
+    },
+    {
+      "type": "add",
+      "id": "e4b72d44c3ae3baf",
+      "item": {
+        "type": "paragraph",
+        "id": "e4b72d44c3ae3baf",
+        "text": "We've created a sample site that uses a Template to define multiple scales for rating cities. Explore there to see how FiveStar works with other wiki data capabilities. [http://best.ward.bay.wiki.org/ site]"
+      },
+      "after": "59effee564873526",
+      "date": 1494596547478
+    },
+    {
+      "type": "edit",
+      "id": "e4b72d44c3ae3baf",
+      "item": {
+        "type": "paragraph",
+        "id": "e4b72d44c3ae3baf",
+        "text": "We've created a sample site that uses a Template to define multiple scales for rating cities. Explore there to see how FiveStar works with other wiki data capabilities."
+      },
+      "date": 1494596565968
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d8fccd7e8a388d41"
+      },
+      "id": "d8fccd7e8a388d41",
+      "type": "add",
+      "after": "c42bf096dae68b64",
+      "date": 1494596572043
+    },
+    {
+      "type": "edit",
+      "id": "d8fccd7e8a388d41",
+      "item": {
+        "type": "reference",
+        "id": "d8fccd7e8a388d41",
+        "site": "best.ward.bay.wiki.org",
+        "slug": "best-cities",
+        "title": "Best Cities",
+        "text": "Here we list some well known cities, create pages for them with a template, and then rate them on many dimensions clicking stars. Results are automatically aggregated as a single file. [http://best.ward.bay.wiki.org/plugin/fivestar/slugs json]"
+      },
+      "date": 1494596591794
+    },
+    {
+      "type": "move",
+      "order": [
+        "d2f89852e5065f0f",
+        "947cb8e17d957b87",
+        "59effee564873526",
+        "e4b72d44c3ae3baf",
+        "d8fccd7e8a388d41",
+        "c42bf096dae68b64"
+      ],
+      "id": "d8fccd7e8a388d41",
+      "date": 1494596605426
     }
   ]
 }
