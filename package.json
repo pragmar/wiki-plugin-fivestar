@@ -1,6 +1,6 @@
 {
   "name": "wiki-plugin-fivestar",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Federated Wiki - Five Star Rating Plug-in",
   "keywords": [
     "wiki",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "async": "^2.4.0",
+    "csv-write-stream": "^2.0.0",
     "glob": "^7.1.1",
     "jsonfile": "^3.0.0"
   }
