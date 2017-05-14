@@ -66,7 +66,7 @@
             var item = story[i]
             if(item && item.type && item.type == 'fivestar') {
               if(item.stars) {
-                stars[item.text||'unlabled'] = parseInt(item.stars)
+                stars[item.key||item.text||'unlabled'] = parseInt(item.stars)
               }
             }
           }
