@@ -94,6 +94,7 @@
                 var item = wiki.getItem(el.container);
                 
                 item.stars = data;
+                item.key = item.text.split("\n")[0]
                 save(el.container, item);
                 render();
             

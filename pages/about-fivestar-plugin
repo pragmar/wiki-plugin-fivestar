@@ -15,7 +15,7 @@
     {
       "type": "paragraph",
       "id": "59effee564873526",
-      "text": "Markup the plugin with the name of the property being rated. This should be one line, written in Title Case, no punctuation or newline."
+      "text": "Markup the plugin with the name of the property being rated. This should be one line, written in Title Case."
     },
     {
       "type": "paragraph",
@@ -155,7 +155,7 @@
       "item": {
         "type": "paragraph",
         "id": "59effee564873526",
-        "text": "Markup the plugin with the name of the property being rated. This should be one line, written in Title Case, no punctuation or newline."
+        "text": "Markup the plugin with the name of the property being rated. This should be one line, written in Title Case."
       },
       "date": 1494596256297
     },
