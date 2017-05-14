@@ -73,6 +73,7 @@
                 var rating = el.star.attr('data-rating');
                 $('.star.hover', el.container).css('opacity', '0');
                 $('.star.hover:lt('+rating+')', el.container).css('opacity', '1');
+                container.trigger('thumb', item.text)
                 
             });
             
