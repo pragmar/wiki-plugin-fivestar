@@ -73,6 +73,7 @@
                 var rating = el.star.attr('data-rating');
                 $('.star.hover', el.container).css('opacity', '0');
                 $('.star.hover:lt('+rating+')', el.container).css('opacity', '1');
+                container.trigger('thumb', item.text)
                 
             });
             
@@ -92,12 +93,20 @@
                 var data = el.star.attr('data-rating');
                 var item = wiki.getItem(el.container);
                 
-                item.text = data;
+                item.stars = data;
+                item.key = item.text.split("\n")[0]
                 save(el.container, item);
                 render();
             
             });
         });
+
+        container.addClass('radar-source')
+        container.get(0).radarData = function(){
+            data = {}
+            data[item.text] = parseInt(item.stars)
+            return data
+        }
         
         render();
         return container;
@@ -108,7 +117,7 @@
         $('.fivestar').each(function(index, value){
             var _this = $(this);
             var item = wiki.getItem(_this);
-            var stars = item.text;
+            var stars = item.stars || parseInt(item.text) || 0;
             // set yellow stars to stored vales and kill active hover 
             $('.star.stored',_this).css('opacity', '0');
             $('.star.stored:lt('+stars+')', _this).css('opacity', '1');
