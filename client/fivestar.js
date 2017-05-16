@@ -60,7 +60,7 @@
         
         // setup event handling for stars
         $(".star.active", container).each(function(index, value){
-        	
+            
             // set href to get cursor, data-rating rating value defined in emit loop
             var _this = $(this);
             var rating = _this.data("rating");
@@ -127,59 +127,59 @@
     };
     
     getConfiguration = function(text){
-    	var configuration = {
-    		hover: [],
-    		key: null,
-    		maximum: 5, 
-    	};
-    	var reOuter = /^([\w\-]+)?\n?(\d+)?(\nHOVER[\s\S]*)?/;  // (#key)(#starMaximum)(#hovers)
-    	var reInner = /\nHOVER (\d+)\s+([\w\ ]+)/g;        		// HOVER (#starIndex)(#label)
-    	var resultOuter = reOuter.exec(text);
-    	if(resultOuter !== null){
-    		configuration.key = $.trim(resultOuter[1]);
-    		if(resultOuter[2] !== undefined){
-    			// cap stars to 10, defend against configuration hostility
-    			configuration.maximum = Math.max(Number($.trim(resultOuter[2]), 10));
-    		}
-    		var resultInner = null;
-    		while((resultInner = reInner.exec(resultOuter[3])) !== null){
-    			var starIndex = Number(resultInner[1]) - 1;
-    			if(starIndex >= 0 && starIndex < configuration.maximum){
-    				configuration.hover[starIndex] = $.trim(resultInner[2]);
-    			}
-    		}
-    	}
-    	return configuration;
+        var configuration = {
+            hover: [],
+            key: null,
+            maximum: 5, 
+        };
+        var reOuter = /^([\w\-]+)?\n?(\d+)?(\nHOVER[\s\S]*)?/;      // (#key)(#starMaximum)(#hovers)
+        var reInner = /\nHOVER (\d+)\s+([\w\ ]+)/g;                 // HOVER (#starIndex)(#label)
+        var resultOuter = reOuter.exec(text);
+        if(resultOuter !== null){
+            configuration.key = $.trim(resultOuter[1]);
+            if(resultOuter[2] !== undefined){
+                // cap stars to 10, defend against configuration hostility
+                configuration.maximum = Math.max(Number($.trim(resultOuter[2]), 10));
+            }
+            var resultInner = null;
+            while((resultInner = reInner.exec(resultOuter[3])) !== null){
+                var starIndex = Number(resultInner[1]) - 1;
+                if(starIndex >= 0 && starIndex < configuration.maximum){
+                    configuration.hover[starIndex] = $.trim(resultInner[2]);
+                }
+            }
+        }
+        return configuration;
     };
     
     reversion = function(div, item){
-    	
-    	// one reversion cycle per fivestar is full coverage
+        
+        // one reversion cycle per fivestar is full coverage
         if(div.data("reversioned") !== undefined){
-        	return;
+            return;
         }
         
-    	switch(true){
-    		case item.version !== undefined:
-    			// already versioned and current, no revision necessary
-    			break;
-    		case /^[1-5]$/.exec(item.text) !== null && item.stars === undefined: 
-    			// presumed 0.1.x, rev to current version
-    			console.log("fivestar 0.1.x storage revision, text has moved to stars, explict versioning begins.")
-	        	item.stars = Number(item.text);
-	        	item.text = "fivestar-key-not-provided";
-	        	item.version = version;
-	        	// save required for old instance to work under new dev utilizing stars field
-	            save(div, item);
-	            break;
-	        default:
-	        	// presumed new object, also possible, 0.2.x, structurally similar to 0.3.x (minus
-	        	// data versioning), both can defer version save until initiated by user.
-	        	break;
-    	}
-    	
-    	div.data("reversioned","true");
-    	
+        switch(true){
+            case item.version !== undefined:
+                // already versioned and current, no revision necessary
+                break;
+            case /^[1-5]$/.exec(item.text) !== null && item.stars === undefined: 
+                // presumed 0.1.x, rev to current version
+                console.log("fivestar 0.1.x storage revision, text has moved to stars, explict versioning begins.")
+                item.stars = Number(item.text);
+                item.text = "fivestar-key-not-provided";
+                item.version = version;
+                // save required for old instance to work under new dev utilizing stars field
+                save(div, item);
+                break;
+            default:
+                // presumed new object, also possible, 0.2.x, structurally similar to 0.3.x (minus
+                // data versioning), both can defer version save until initiated by user.
+                break;
+        }
+        
+        div.data("reversioned","true");
+        
     };
     
     render = function(){
